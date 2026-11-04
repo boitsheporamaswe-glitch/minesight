@@ -3,7 +3,7 @@ import os, sys, socket, subprocess, threading, webbrowser
 if sys.version_info < (3, 8): sys.exit("MineSight needs Python 3.8 or newer. You have " + sys.version.split()[0])
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 try:
-    import fastapi, uvicorn, sklearn, pandas, numpy, joblib, pydantic
+    import fastapi, uvicorn, sklearn, pandas, numpy, joblib, pydantic, reportlab
 except ImportError:
     print("Installing requirements (first run only)...")
     if subprocess.call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"]):
