@@ -4,5 +4,6 @@ venv/
 .env
 .secret
 *.db
+*.db-*
 data/
 models/
