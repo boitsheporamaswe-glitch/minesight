@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic>=2
+scikit-learn
+pandas
+numpy
+joblib
+reportlab
+segno
