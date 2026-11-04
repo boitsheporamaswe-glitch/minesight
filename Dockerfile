@@ -6,4 +6,4 @@ COPY . .
 RUN python train.py && useradd -m app && mkdir /data && chown app /data
 USER app
 ENV DATA_DIR=/data
-CMD ["uvicorn","app:app","--host","0.0.0.0","--port","8000","--proxy-headers","--forwarded-allow-ips=*"]
+CMD ["sh","-c","uvicorn app:app --host 0.0.0.0 --port ${PORT:-8000} --proxy-headers --forwarded-allow-ips=*"]
